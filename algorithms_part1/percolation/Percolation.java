@@ -127,10 +127,10 @@ public class Percolation {
         tryConnectToNeighbor(index, getDownSiteIndex(row, col));
     }
 
-    private void tryConnectToNeighbor(int index, int leftIndex) {
-        if (leftIndex != -1 && grid[leftIndex]) {
-            uf.union(index, leftIndex);
-            fullUf.union(index, leftIndex);
+    private void tryConnectToNeighbor(int index, int neighborIndex) {
+        if (neighborIndex != -1 && grid[neighborIndex]) {
+            uf.union(index, neighborIndex);
+            fullUf.union(index, neighborIndex);
         }
     }
 
