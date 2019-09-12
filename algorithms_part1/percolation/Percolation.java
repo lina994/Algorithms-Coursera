@@ -121,31 +121,16 @@ public class Percolation {
     }
 
     private void tryConnectToNeighbors(int row, int col, int index) {
-        int leftIndex;
-        int rightIndex;
-        int upIndex;
-        int downIndex;
+        tryConnectToNeighbor(index, getLeftSiteIndex(row, col));
+        tryConnectToNeighbor(index, getRightSiteIndex(row, col));
+        tryConnectToNeighbor(index, getUpSiteIndex(row, col));
+        tryConnectToNeighbor(index, getDownSiteIndex(row, col));
+    }
 
-        leftIndex = getLeftSiteIndex(row, col);
-        rightIndex = getRightSiteIndex(row, col);
-        upIndex = getUpSiteIndex(row, col);
-        downIndex = getDownSiteIndex(row, col);
-
+    private void tryConnectToNeighbor(int index, int leftIndex) {
         if (leftIndex != -1 && grid[leftIndex]) {
             uf.union(index, leftIndex);
             fullUf.union(index, leftIndex);
-        }
-        if (rightIndex != -1 && grid[rightIndex]) {
-            uf.union(index, rightIndex);
-            fullUf.union(index, rightIndex);
-        }
-        if (upIndex != -1 && grid[upIndex]) {
-            uf.union(index, upIndex);
-            fullUf.union(index, upIndex);
-        }
-        if (downIndex != -1 && grid[downIndex]) {
-            uf.union(index, downIndex);
-            fullUf.union(index, downIndex);
         }
     }
 
@@ -158,43 +143,5 @@ public class Percolation {
             uf.union(index, gridLength * gridLength + 1);
         }
     }
-
-    // for test
-    // private void print_grid(){
-    //     System.out.println("\ngrid state");
-    //     System.out.print(isOpen(1, 1) + " ");
-    //     System.out.print(isOpen(1, 2) + " ");
-    //     System.out.println(isOpen(1, 3));
-    //     System.out.print(isOpen(2, 1) + " ");
-    //     System.out.print(isOpen(2, 2) + " ");
-    //     System.out.println(isOpen(2, 3));
-    //     System.out.print(isOpen(3, 1) + " ");
-    //     System.out.print(isOpen(3, 2) + " ");
-    //     System.out.println(isOpen(3, 3));
-    //     System.out.println();
-    // }
-
-    // test client (optional)
-    // public static void main(String[] args){
-    //     Percolation p = new Percolation(3);
-    //     p.print_grid();
-    //
-    //
-    //     System.out.println("full? " + p.isFull(1, 1));
-    //     p.open(1,1);
-    //     System.out.println("full? " + p.isFull(1, 1));
-    //     System.out.println("full? " + p.isFull(2, 1));
-    //     p.open(2,1);
-    //     System.out.println("percolates? " + p.percolates());
-    //
-    //     p.open(3,1);
-    //     System.out.println("percolates? " + p.percolates());
-    //     p.open(3,1);
-    //     System.out.println("percolates? " + p.percolates());
-    //     System.out.println("full? " + p.isFull(3, 1));
-    //     p.print_grid();
-    //     System.out.println("numberOfOpenSites? " + p.numberOfOpenSites());
-    //
-    // }
 
 }
