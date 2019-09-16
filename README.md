@@ -9,3 +9,8 @@ A program to estimate the value of the percolation threshold via Monte Carlo sim
 * Problem description: [specification](https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php "")
 * [Solution](https://github.com/lina994/Algorithms-Coursera/tree/master/algorithms_part1/percolation "")
 
+### Assignment 2 - Deques and Randomized Queues
+A generic Deques and Randomized Queue implementation.
+
+* Problem description: [specification](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php "")
+* [Solution](https://github.com/lina994/Algorithms-Coursera/tree/master/algorithms_part1/queues "")
