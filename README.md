@@ -14,3 +14,9 @@ A generic Deques and Randomized Queue implementation.
 
 * Problem description: [specification](https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php "")
 * [Solution](https://github.com/lina994/Algorithms-Coursera/tree/master/algorithms_part1/queues "")
+
+### Assignment 3 - Collinear Points
+Given a set of points in the plane, design an algorithm to find all line segments that contain 4 or more points.
+
+* Problem description: [specification](https://coursera.cs.princeton.edu/algs4/assignments/collinear/specification.php "")
+* [Solution](https://github.com/lina994/Algorithms-Coursera/tree/master/algorithms_part1/collinear "")
